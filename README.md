@@ -13,6 +13,7 @@ A blazingly fast, distributed caching server built with Rust. Designed for high-
 - Powered by Tokio for non-blocking async operations
 - Simple, serializable protocol that's easy to work with
 - Modular workspace structure that keeps things organized
+- Supports ttl (time-to-live) for cache entries (default: 60 seconds)
 
 ## What You Can Do
 
