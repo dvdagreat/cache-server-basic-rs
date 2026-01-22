@@ -3,6 +3,10 @@
 
 A blazingly fast, distributed caching server built with Rust. Designed for high-performance data access with a focus on reliability and scalability.
 
+## Quick Demo
+
+<img src="./assets/demo.gif" alt="Cache server demo" width="800">
+
 ## Key Features
 
 - Thread-safe in-memory storage for lightning-fast access
