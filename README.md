@@ -21,6 +21,7 @@ A fast caching server built with Rust. Designed for high-performance data access
 - **SET**: Save your key-value pairs
 - **HAS**: Check whether a key is in the cache
 - **STATS**: See what's happening under the hood
+- **DEL**: Remove key from the cache
 - **QUIT**: Close your connection
 
 ## How It's Organized
