@@ -47,3 +47,15 @@ Run it:
 ```bash
 cargo run -p cache_server --release
 ```
+
+Invoke using `netcat`:
+```bash
+nc localhost 8080
+```
+
+or for single invocation:
+
+```bash
+echo "SET mykey myvalue 60" | nc -N localhost 8080
+echo "GET mykey" | nc -N localhost 8080
+```
