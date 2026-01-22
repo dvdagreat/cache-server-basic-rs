@@ -43,3 +43,12 @@ pub fn handle_stats(cache: &SharedCache) -> String {
         stats.item_count, stats.total_bytes
     )
 }
+
+pub fn handle_delete(key: &str, cache: &SharedCache) -> String {
+    if cache.has(key) {
+        cache.remove(key);
+        "OK\n".to_string()
+    } else {
+        "NOT_FOUND\n".to_string()
+    }
+}

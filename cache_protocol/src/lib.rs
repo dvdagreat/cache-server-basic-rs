@@ -53,4 +53,8 @@ impl SharedCache {
             total_bytes,
         }
     }
+
+    pub fn remove(&self, key: &str) {
+        self.store.remove(key);
+    }
 }

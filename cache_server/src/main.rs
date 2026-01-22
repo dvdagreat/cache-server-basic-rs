@@ -4,7 +4,7 @@ use tokio::io::{AsyncBufReadExt, AsyncWriteExt, BufReader};
 use tokio::net::{TcpListener, TcpStream};
 use tokio::time::{Duration, Instant};
 
-use crate::commands::{handle_get, handle_has, handle_set, handle_stats};
+use crate::commands::{handle_delete, handle_get, handle_has, handle_set, handle_stats};
 
 mod commands;
 
@@ -60,6 +60,7 @@ async fn handle_connection(
             ["GET", key] => handle_get(key, &cache),
             ["SET", key, val, ttl] => handle_set(key, val, Some(ttl), &cache),
             ["HAS", key] => handle_has(key, &cache),
+            ["DEL", key] => handle_delete(key, &cache),
             ["STATS"] => handle_stats(&cache),
             ["QUIT"] => break,
             _ => "ERROR: Unknown Command\n".to_string(),
