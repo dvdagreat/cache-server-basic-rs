@@ -1,7 +1,7 @@
 
 ## Overview
 
-A blazingly fast, distributed caching server built with Rust. Designed for high-performance data access with a focus on reliability and scalability.
+A fast caching server built with Rust. Designed for high-performance data access with a focus on reliability and scalability.
 
 ## Quick Demo
 
